@@ -1,0 +1,71 @@
+@import "_mixins";
+@import "_veriables";
+
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  .container {
+    .content {
+      @include flex-space-between;
+
+      .logo {
+        font-weight: 700;
+        font-size: 32px;
+        color: $text-color;
+      }
+
+      ul {
+        @include flex-space-between;
+
+        li {
+          margin: 10px;
+
+          .link {
+            color: $text-color;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .login {
+        @include btn;
+      }
+
+      .burger {
+        width: 2rem;
+        height: 0.2rem;
+        background-color: $text-color;
+        position: relative;
+        cursor: pointer;
+        display: none;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 7px;
+          left: 0;
+          right: 0;
+          width: 2rem;
+          height: 0.2rem;
+          cursor: pointer;
+          background-color: $text-color;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -7px;
+          left: 0;
+          right: 0;
+          width: 2rem;
+          height: 0.2rem;
+          cursor: pointer;
+          background-color: $text-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "_veriables";
+@import "_mixins";
+
+.services{
+  padding: 100px 0;
+  .content{
+    display: flex;
+    flex-direction: column;
+    .block{
+      margin-bottom:5rem;
+      @include flex-space-between;
+      .block-midle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      img{
+        height: 576px;
+        width: 354px;
+        object-fit: cover;
+      }
+      .services-img{
+        width: 384px;
+        height: 384px;
+      }
+      .info{
+        width: 45%;
+        margin-left: 20px;
+        p{
+          padding-bottom: 20px;
+        }
+        .btn{
+          @include btn;
+        }
+      }
+
+    }
+  }
+}

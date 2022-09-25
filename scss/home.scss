@@ -1,0 +1,44 @@
+@import "_veriables";
+@import "_mixins";
+
+.home {
+  height: 120vh;
+  display: flex;
+  align-items: center;
+
+  .content {
+    @include flex-space-between;
+
+    .left {
+      width: 45%;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .home-btn {
+        @include btn;
+      }
+    }
+
+    .right {
+      width: 45%;
+
+      .images {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        .midle-img {
+          align-self: flex-end;
+          margin: 50px 10px 0 10px;
+        }
+
+        //img {
+        //  height: 600px;
+        //  width: 220px;
+        //}
+      }
+    }
+  }
+}

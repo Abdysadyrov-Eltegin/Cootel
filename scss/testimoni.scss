@@ -1,0 +1,35 @@
+@import "_veriables";
+@import "_mixins";
+
+
+.testimoni{
+  .content{
+    align-items: center;
+    text-align: center;
+    @include column;
+    margin: 90px 0;
+    h1{
+      padding-bottom: 62px;
+    }
+    img{
+      padding-bottom: 44px;
+    }
+    p{
+      padding-bottom: 40px;
+    }
+    span{
+      padding-bottom: 24px;
+      color:$text-color;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    .content-img-icons{
+      align-items: center;
+      justify-content: center;
+      .content-img-icons-midle{
+        padding: 1px 0 42px 0;
+      }
+    }
+  }
+}

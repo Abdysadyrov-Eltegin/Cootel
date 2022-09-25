@@ -1,0 +1,59 @@
+@import "_veriables";
+@import "_mixins";
+
+
+.room{
+  .content{
+    @include flex-space-between;
+    margin: 128px 0;
+    .left{
+      @include column;
+      width: 45%;
+      span{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: $h3-span;
+        padding-bottom: 12px;
+      }
+      p{
+        padding-bottom: 48px;
+      }
+      .room-left-btn{
+        .left-btn{
+          @include btn;
+          border-radius: 4px;
+        }
+        .right-btn{
+          color: $h3-span;
+        }
+      }
+    }
+    .right{
+      @include column;
+      width: 45%;
+      .block{
+        margin: 30px 0;
+        border-radius: 4px;
+        padding: 32px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        .block-title{
+          @include flex-space-between;
+          h2{
+            font-size: 24px;
+            color: $h3-span;
+          }
+          a{
+            color: #FF620A;
+            font-size: 40px;
+          }
+        }
+        p{
+          padding-top: 20px;
+        }
+
+      }
+    }
+  }
+}
